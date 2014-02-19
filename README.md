@@ -24,7 +24,15 @@ To launch the VM, just type
 vagrant up
 ```
 
-and wait. This can take a while the first time.
+This can take a while the first time.
+
+The first time you launch the VM, you will have to run 
+
+```
+vagrant reload
+```
+
+to reboot the VM in order to have the Linux kernel loaded with proper options.
 
 When the VM is launched, use 
 
