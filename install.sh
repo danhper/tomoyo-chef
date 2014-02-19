@@ -1,6 +1,6 @@
 #!/bin/sh
 
-REPOSITORY="https://git.tuvistavie.com/tuvistavie/tomoyo-chef.git"
+REPOSITORY="https://github.com/tuvistavie/tomoyo-chef.git"
 
 for cmd in "vboxmanage" "vagrant" "git" "gem"; do
   if ! eval "which $cmd > /dev/null"; then
