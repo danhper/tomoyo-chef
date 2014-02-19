@@ -1,0 +1,13 @@
+{
+  "sources": {
+    "tomoyo": {
+      "path": "."
+    },
+    "magic_shell": {
+      "locked_version": "1.0.0"
+    },
+    "apt": {
+      "locked_version": "2.3.4"
+    }
+  }
+}
