@@ -8,7 +8,7 @@ version '0.1.0'
 
 recipe "tomoyo::default", "TOMOYO Linux Installation"
 
-%w{ magic_shell apt }.each do |dep|
+%w{ apt yum }.each do |dep|
   depends dep
 end
 

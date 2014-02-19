@@ -31,7 +31,6 @@ execute "Install tomoyo-tools" do
   not_if { ::File.exists?(tomoyo['tomoyo_path']) }
 end
 
-
 execute "ldconfig" do
   command "ldconfig /usr/lib64"
   action :nothing

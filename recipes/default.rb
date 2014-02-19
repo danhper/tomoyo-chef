@@ -10,7 +10,7 @@ include_recipe "tomoyo::packages"
 include_recipe "tomoyo::tomoyo_tools"
 
 # Configure the system
-include_recipe "tomoyo::system_config"
+include_recipe "tomoyo::init"
 
 # Configure GRUB
 include_recipe "tomoyo::grub_config"

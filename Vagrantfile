@@ -12,7 +12,6 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   config.vm.network :private_network, ip: "192.168.3.4"
-  # config.vm.network :forwarded_port, guest: 80, host: 8080
 
   config.vm.synced_folder ".", "/vagrant", :disabled => true
   config.vm.synced_folder DATA_DIR, "/tomoyo-nfs", :nfs => true

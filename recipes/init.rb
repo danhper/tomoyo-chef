@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: tomoyo
-# Recipe:: system_config
+# Recipe:: init
 #
 
 tomoyo = node['tomoyo']
