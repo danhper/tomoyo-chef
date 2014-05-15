@@ -5,12 +5,8 @@
 
 tomoyo = node['tomoyo']
 
-# Setup apt or yum depending on OS
-if platform_family?("rhel")
-  include_recipe "yum::epel"
-else
-  include_recipe "apt"
-end
+# Setup apt
+include_recipe "apt"
 
 # Install required packages
 tomoyo['packages'].each do |pkg|
