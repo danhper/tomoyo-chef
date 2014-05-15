@@ -8,14 +8,7 @@ for cmd in "vboxmanage" "vagrant" "git" "gem"; do
   fi
 done
 
-if `gem list | grep berkshelf > /dev/null`; then
-  echo 'berkshelf gem already installed, skipping.'
-else
-  echo 'Installing berkshelf gem...'
-  gem install berkshelf
-fi
-
-for plugin in "vagrant-omnibus" "vagrant-bindfs" "vagrant-berkshelf"; do
+for plugin in "vagrant-bindfs"; do
   if eval "vagrant plugin list | grep $plugin > /dev/null"; then
     echo "$plugin already installed, skipping."
   else
