@@ -17,7 +17,7 @@ for plugin in "vagrant-bindfs"; do
   fi
 done
 
-git clone $REPOSITORY
+git clone --recursive $REPOSITORY
 
 cd tomoyo-chef
 
