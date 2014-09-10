@@ -14,4 +14,5 @@ if tomoyo['reboot_on_install']
     action :nothing
     subscribes :run, "execute[Update grub config]", :immediately
   end
+  include_recipe "reboot::default"
 end

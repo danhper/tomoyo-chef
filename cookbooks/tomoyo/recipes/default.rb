@@ -14,3 +14,6 @@ include_recipe "tomoyo::init"
 
 # Configure GRUB
 include_recipe "tomoyo::grub_config"
+
+# Reboot if necessary
+include_recipe "tomoyo::reboot"
