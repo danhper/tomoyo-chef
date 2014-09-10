@@ -8,12 +8,12 @@ template "grub" do
   source "grub.erb"
   path "/etc/default/grub"
   action :nothing
-  subscribes :create, "execute[Tomoyo init]"
+  subscribes :create, "execute[Tomoyo init]", :immediately
 end
 
 # Update grub configuration
 execute "Update grub config" do
   command "grub-mkconfig -o /boot/grub/grub.cfg"
   action :nothing
-  subscribes :run, "template[grub]"
+  subscribes :run, "template[grub]", :immediately
 end

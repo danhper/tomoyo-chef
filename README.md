@@ -13,6 +13,15 @@ The cookbook does not reinstall the kernel, so the Linux kernel should already s
 
 Just include `tomoyo::default` to your recipe.
 
+You can customize the following:
+
+```ruby
+node['tomoyo']['packages'] = %w{ wget patch gcc make libncurses-dev }
+node['tomoyo']['usrlib_path'] = '/usr/lib64'
+node['tomoyo']['tomoyo_path'] = "#{node['tomoyo']['usrlib_path']}/tomoyo"
+node['tomoyo']['reboot_on_install'] = false
+```
+
 ## Vagrant usage
 
 ### Dependencies

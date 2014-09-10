@@ -34,5 +34,5 @@ end
 execute "ldconfig" do
   command "ldconfig /usr/lib64"
   action :nothing
-  subscribes :run, "execute[Install tomoyo-tools]"
+  subscribes :run, "execute[Install tomoyo-tools]", :immediately
 end

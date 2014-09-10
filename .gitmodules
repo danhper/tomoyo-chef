@@ -1,3 +1,6 @@
 [submodule "cookbooks/apt"]
 	path = cookbooks/apt
 	url = https://github.com/opscode-cookbooks/apt.git
+[submodule "cookbooks/reboot"]
+	path = cookbooks/reboot
+	url = https://github.com/Afterglow/chef-reboot.git
