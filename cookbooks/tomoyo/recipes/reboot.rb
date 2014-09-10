@@ -6,13 +6,13 @@
 tomoyo = node['tomoyo']
 
 if tomoyo['reboot_on_install']
-  ruby_block 'set reboot' do
-    block do
-      node.run_state[:reboot_delay] = 'now'
-      node.default[:reboot][:auto_reboot] = 1
-    end
-    action :nothing
-    subscribes :run, "execute[Update grub config]", :immediately
-  end
   include_recipe "reboot::default"
+
+  node.run_state[:reboot_delay] = 'now'
+
+  chef_handler 'RebootHandler' do
+    source "#{node['chef_handler']['handler_path']}/reboot_handler.rb"
+    action :nothing
+    subscribes :enable, "execute[Update grub config]"
+  end
 end
